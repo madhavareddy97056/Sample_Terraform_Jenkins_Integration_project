@@ -5,6 +5,6 @@ resource "aws_instance" "jenkins-terrafrm-integration" {
   key_name               = "linuxkey"
   vpc_security_group_ids = ["sg-02cd4172d34747bc7"]
   tags = {
-    Name = "Jenkins_server"
+    Name = "Jenkins_terra_int_server"
   }
 }
