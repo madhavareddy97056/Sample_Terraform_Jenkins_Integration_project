@@ -44,6 +44,14 @@ pipeline {
             steps {
                 sh "terraform plan"
             }
+             post {
+                success {
+                    echo "Terraform apply was Success"
+                }
+                failure {
+                    echo "Terraform apply was Failed"
+                }
+            }
         }
         stage ("provisiong resources"){
             steps {
