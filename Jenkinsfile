@@ -53,7 +53,7 @@ pipeline {
                 }
             }
         }
-        /*stage ("provisiong resources"){
+        stage ("provisiong resources"){
             steps {
                 sh "terraform apply --auto-approve"
             }
@@ -65,8 +65,8 @@ pipeline {
                     echo "Terraform apply was Failed"
                 }
             }
-        }*/
-        stage ("Destroying resources"){
+        }
+       /* stage ("Destroying resources"){
             steps {
                 sh "terraform destroy --auto-approve"
             }
@@ -78,6 +78,6 @@ pipeline {
                     echo "Terraform destroy was Failed"
                 }
             }
-        } 
+        } */
     }
 }
