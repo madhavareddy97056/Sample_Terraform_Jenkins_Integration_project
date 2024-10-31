@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        terraform "terraformcli"
+        terraform "terraformtool"
     }
     stages {
         stage ("fetch code") {
