@@ -46,10 +46,10 @@ pipeline {
             }
              post {
                 success {
-                    echo "Terraform apply was Success"
+                    echo "Terraform plan was Success"
                 }
                 failure {
-                    echo "Terraform apply was Failed"
+                    echo "Terraform plan was Failed"
                 }
             }
         }
@@ -66,5 +66,18 @@ pipeline {
                 }
             }
         }
+        /*stage ("Destroying resources"){
+            steps {
+                sh "terraform destroy --auto-approve"
+            }
+            post {
+                success {
+                    echo "Terraform destroy was Success"
+                }
+                failure {
+                    echo "Terraform destroy was Failed"
+                }
+            }
+        } */
     }
 }
